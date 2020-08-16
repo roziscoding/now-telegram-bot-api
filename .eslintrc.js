@@ -14,7 +14,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/require-await': 'off',
     'array-bracket-spacing': ['error', 'always'],
     'no-warning-comments': 'error'
   }
-}
+};

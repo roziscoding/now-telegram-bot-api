@@ -1,5 +1,5 @@
 {
-  "name": "now-telegram-bot-api",
+  "name": "vercel-telegram-bot-api",
   "version": "1.0.0",
   "description": "Simple Telegram Bot API SDK",
   "main": "lib/index.js",
@@ -7,9 +7,10 @@
     "test": "mocha -b -r ts-node/register test/**/*.ts",
     "build": "tsc",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
-    "build:clean": "npm run build && npm run build",
+    "build:clean": "npm run clean && npm run build",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run build:clean"
   },
   "files": [
     "lib/**/*.{js,d.ts}"
@@ -40,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjmunhoz/now-telegram-bot-api.git"
+    "url": "git+https://github.com/rjmunhoz/vercel-telegram-bot-api.git"
   },
   "bugs": {
-    "url": "https://github.com/rjmunhoz/now-telegram-bot-api/issues"
+    "url": "https://github.com/rjmunhoz/vercel-telegram-bot-api/issues"
   },
-  "homepage": "https://github.com/rjmunhoz/now-telegram-bot-api#readme",
+  "homepage": "https://github.com/rjmunhoz/vercel-telegram-bot-api#readme",
   "dependencies": {
     "@now/node": "^1.5.1",
     "@types/got": "^9.6.10",

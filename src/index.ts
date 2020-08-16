@@ -82,13 +82,13 @@ export const getUpdateHandler = (handlers: Partial<UpdateHandlers>) => async (co
     await handlers.text(update.message as RequireSpecific<Message, 'text'>, context)
   }
 
-  if (update.message?.text && handlers.tags)
-
+  if (update.message?.text && handlers.tags) {
     if (update.inline_query && handlers.inlineQuery) {
       debug('inline_query', update)
 
       await handlers.inlineQuery(update.inline_query, context)
     }
+  }
 
   if (!context.res.headersSent) {
     debug('unhandled', 'Update was not handled. Finishing request')

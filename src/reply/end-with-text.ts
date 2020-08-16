@@ -17,12 +17,12 @@ export const endWithText = async (text: string, { res, update }: TelegramContext
     return
   }
 
-  const { message: { message_id, chat: { id: chatId } } } = update
+  const { message: { message_id: messageId, chat: { id: chatId } } } = update
 
   const payload: any = {
     method: 'sendMessage',
     chat_id: chatId,
-    reply_to_message_id: reply ? message_id : undefined,
+    reply_to_message_id: reply ? messageId : undefined,
     text: text,
     parse_mode: parseMode,
     disable_web_page_preview: !linkPreview
